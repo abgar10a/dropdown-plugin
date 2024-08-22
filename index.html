@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dropdown Plugin</title>
+</head>
+<body>
+
+    <div id="dropdown-container">
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown">
+            <option value="">-- Select --</option>
+            <option value="name">Name</option>
+            <option value="surname">Surname</option>
+            <option value="date">Date</option>
+        </select>
+    </div>
+
+    <div id="input-container"></div>
+
+    <!-- Include the plugin script -->
+    <script src="plugin/dropdown.js"></script>
+
+    <!-- Initialize the plugin -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownPlugin = new DropdownPlugin('dropdown', 'input-container');
+        });
+    </script>
+    
+</body>
+</html>
